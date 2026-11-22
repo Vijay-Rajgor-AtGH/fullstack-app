@@ -1,0 +1,12 @@
+<div style="max-width: 500px; margin: 40px auto; font-family: sans-serif;">
+  <h2>Full-Stack Cloud Demo</h2>
+  <div style="display: flex; gap: 8px; margin-bottom: 20px;">
+    <input [(ngModel)]="newText" placeholder="Enter message to save in MySQL..." style="flex: 1; padding: 8px;" />
+    <button (click)="addMessage()" style="padding: 8px 16px;">Save</button>
+  </div>
+  <ul>
+    @for (msg of messages(); track msg.id) {
+      <li>{{ msg.text }}</li>
+    }
+  </ul>
+</div>
